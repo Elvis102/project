@@ -251,6 +251,8 @@ Notemos que si $d(x,y)=d(y,x)$, entonces
 \begin{eqnarray*}
 \frac{d(x,y)}{1+d(x,y)} & = & \frac{d(y,x)}{1+d(y,x)}\\
 \end{eqnarray*}
+La cmoida 
+$45 \mid$
 
 ¡Hasta aqui me quede!44433666yyy
 
