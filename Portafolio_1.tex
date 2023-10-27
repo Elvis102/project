@@ -1,0 +1,369 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+\usepackage{amsmath,amssymb,amsfonts,longtable,mathtools,color,array,booktabs,algorithm2e} \newcommand\red[1]{\textcolor{red}{#1}} \newcommand\blue[1]{\textcolor{blue}{#1}}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Portafolio 1\_Topología},
+  pdfauthor={Elvis Mauricio Sánchez Rogel},
+  colorlinks=true,
+  linkcolor={Maroon},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={Blue},
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Portafolio 1\_Topología}
+\author{Elvis Mauricio Sánchez Rogel}
+\date{Curso de Topología}
+
+\begin{document}
+\maketitle
+
+{
+\hypersetup{linkcolor=blue}
+\setcounter{tocdepth}{2}
+\tableofcontents
+}
+\hypertarget{portafolio-1}{%
+\section{Portafolio 1}\label{portafolio-1}}
+
+\hypertarget{ejercicio-1-1.5-pts}{%
+\subsection{Ejercicio 1 (1.5 pts)}\label{ejercicio-1-1.5-pts}}
+
+\textcolor{red}{Sea $d$ una distancia definida en un conjunto arbitrario $X$, sea $k \in \mathbb{R}$.Estudiar para que valores de $k$ la aplicación $d'$ definida como $d'(x,y)=d(x,y)+k$ sería también una métrica.}
+
+\textbf{Demostración:}
+
+Claramente hay que comprobar que se cumpla la primera condición de
+métrica. Para que \(d'(x,x)=d(x,x)+k\) sea métrica debe de cumplirse que
+la distancia \(d(x,x)=0\) para todo \(x \in X\), Es decir:
+\begin{eqnarray*}
+  0 & = & d'(x,x) \\
+  0 & = & d(x,x)+k  \\
+  0 & = & 0 + k \\
+  0 & = & k 
+\end{eqnarray*} Por tanto, el único valor \(k\) para que
+\(d'(x,y) =d(x,y)+k\) se una métrica es que sea \(k=0\).
+
+\hypertarget{ejercicio-2-1.5-pts}{%
+\subsection{Ejercicio 2 (1.5 pts)}\label{ejercicio-2-1.5-pts}}
+
+\textcolor{red}{ Sea $(X,d)$ un espacio métrico. Probar que las bolas cerradas son conjuntos cerrados.}
+
+\textbf{Demostración:}
+
+Sea \(\hat{x} \in X\) y \(r>0\), entonces
+\(\overline{B}(\hat{x},r)=\{ \hat{y} \in X \mid d(\hat{y},\hat{x}) \leq r\}\)
+es un conjunto cerrado, pués
+\(X \setminus \overline B(\hat{x},r) = \{ \hat{y} \in X \mid d(\hat{y},\hat{x}) > r\}= A\)
+es un conjunto abierto.
+
+Para ello demostraremos
+\(X \setminus \overline B(\hat{x},r)= \{ \hat{y} \in X \mid d(\hat{y},\hat{x}) > r\}= A\)
+es un abierto.
+
+Sea \(\hat{y} \in A\), entonces \(d(\hat{y},\hat{x})>r\), y sea
+\(\epsilon=d(d\hat{x},\hat{y})-r>0\), tomamemos un
+\(\hat{z} \in B(\hat{y}, \epsilon)\), tal que se tiene lo siguiente:
+\begin{eqnarray*}
+                           d(\hat{y},\hat{x}) & \leq & d(\hat{y},\hat{z}) + d(\hat{z},\hat{x})\\
+        d(\hat{y},\hat{x}) +r - d(\hat{y},\hat{x}) < d(\hat{y},\hat{x}) - d(\hat{y},\hat{z}) & \leq & d(\hat{z},\hat{x})\\
+                                              r & < & d(\hat{z},\hat{x})\\
+\end{eqnarray*} Por lo tanto, \(\hat{z} \in A\), esto prueba
+\(B(\hat{y}, \epsilon) \subset A\), por lo tanto \(A\) es un conjunto
+abierto, probando así que \(\overline B(\hat{x},r)\) es cerrado.
+
+\hypertarget{ejercicio-3-1.5-pts}{%
+\subsection{Ejercicio 3 (1.5 pts)}\label{ejercicio-3-1.5-pts}}
+
+\textcolor{red}{Sea $X$ un conjunto  y $p \in X$ un punto arbitrario. Demostrar que la familia $\tau_p = \{ U \subset X \;|\; p \in U \} \cup \{ \varnothing \}$ es una topología}
+
+\textbf{Demostración:}
+
+Claramente se observa que el vacío forma parte
+\(\varnothing \in \tau_p\). Por otro lado, \(p \in X\), en consecuencia
+\(X \in \tau_p\).
+
+Sea \(\{U_j \}_{j \in I} \subset \tau_p\), si \(U_j= \varnothing\) para
+todo \(j \in I\), entonces
+\(\displaystyle \bigcup_{j \in J} U_j = \varnothing\), en consecuencia
+\(\displaystyle\bigcup_{j \in J} U_j \in \tau_p\). Por otro lado, si
+existe \(U_i \neq \varnothing\), entonces \(p \in U_i\), en consecuencia
+\(p\in \displaystyle\bigcup_{j \in J} U_j\), por lo tanto
+\(\displaystyle\bigcup_{j \in J} U_j \in \tau_p\).
+
+Ahora sea \(\{U_j\}_{j=1}^k\subseteq \tau_p\), si para algún
+\(i\in \{1,\ldots, k\}\) sucede que \(U_i=\emptyset\), entonces
+\(\displaystyle\bigcap_{j=1}^k U_j=\emptyset\), por tanto
+\(\displaystyle\bigcap_{j=1}^k U_j\in \tau_p\). Por otro lado si sucede
+que \(U_j\ne \emptyset\) para todo \(j\in \{1,\ldots, k\}\), se tiene
+que \(p\in U_j\) para todo \(j\in \{1,\ldots, k\}\), así que
+\(p\in \displaystyle\bigcap_{j=1}^k U_j\), por lo tanto
+\(\displaystyle\bigcap_{j=1}^k U_j\in \tau_p\).
+
+\hypertarget{ejercicio-4-2-pts}{%
+\subsection{Ejercicio 4 (2 pts)}\label{ejercicio-4-2-pts}}
+
+\textcolor{red}{Se considera el conjunto $X=\{a,b,c,d,e,f \}$. Indicar justificadamente si las siguientes familias constituyen topologías en $X$.}
+
+\begin{itemize}
+\item [a)] $\tau_{1} =\{ \varnothing,X,\{a\},\{c,d\},\{a,c,d\},\{a,b,c,d,e\}\}$
+\item [b)] $\tau_{2} =\{ \varnothing,X,\{a\},\{c,d\},\{a,c,e\},\{b,c,d\},\{a,b,c,d,e\}\}$
+\item [c)] $\tau_{3} =\{ \varnothing,X,\{a\},\{f\},\{a,f\},\{a,c,f\},\{b,c,d,e,f\}\}$
+\item [d)]$\tau_{4} =\{ \varnothing,X,\{b\},\{d\},\{a,d\},\{a,b,d\},\{a,b,c,d,e\}\}$
+\end{itemize}
+
+\textcolor{blue}{a) $\tau_{1} =\{ \varnothing,X,\{a\},\{c,d\},\{a,c,d\},\{a,b,c,d,e\}\}$}
+
+\textbf{Demostración:}
+
+Claramente el vacio \(\varnothing\) y el \(X\) estan en la topología
+\(\tau_1\).
+
+Por otro lado, las uniones e interseciones:
+
+\begin{align*}
+\mbox{Unión}                               &        &          &\mbox{Intersección} \\
+\{a\} \cup \varnothing =\{a\}              &        &          &\{a\} \cap \{c,d\}=\varnothing \\
+\{a\} \cup \{c,d\}=\{a,c,d\}               &        &          &\{a\} \cap \{a,c,d\}=\{a\} \\
+\{a\} \cup \{a,c,d\}=\{a,c,d\}             &        &          &\{a\} \cap \{a,b,c,d,e\}=\{a\} \\
+\{c,d\} \cup \{a,c,d\}=\{a,c,d\}           &        &          &\{c,d\} \cap \{a,c,d\}=\{c,d\} \\
+\{a,c,d\} \cup \{a,b,c,d,e\}=\{a,b,c,d,e\} &        &          &\{a,c,d\} \cap \{a,b,c,d,e\}=\{a,c,d\} \\
+\{a,b,c,d,e\} \cup \{a,b,c,d,e,f\}= X      &        &          &\{a,b,c,d,e\} \cap \{a,b,c,d,e,f\}=\{a,b,c,d,e\} 
+\end{align*}
+
+las uniones y las intersecciones de los subconjuntos estan en la
+topología \(\tau_{1}\). Por lo tanto \(\tau_{1}\) es una topología sobre
+\(X\)
+
+\textcolor{blue}{b) $\tau_{2} =\{ \varnothing,X,\{a\},\{c,d\},\{a,c,e\},\{b,c,d\},\{a,b,c,d,e\}\}$}
+
+\textbf{Demostración:}
+
+Claramente el vacio \(\varnothing\) y el \(X\) estan en la topología
+\(\tau_2\).
+
+Por otro lado, las uniones e interseciones:
+
+\begin{align*}
+\mbox{Unión}                               &        &          &\mbox{Intersección} \\
+\{a\} \cup \varnothing =\{a\}              &        &          &\{a\} \cap \{c,d\}=\varnothing \\
+\{a\} \cup \{c,d\}=\{a,c,d\}               &        &          &\{a\} \cap \{a,c,e\}=\{a\} \\
+\{a\} \cup \{a,c,d\}=\{a,c,d\}             &        &          &\{a\} \cap \{b,c,d\}=\varnothing \\
+\{c,d\} \cup \{a,c,d\}=\{a,c,d\}           &        &          &\textcolor{blue}{\{c,d\} \cap \{a,c,e\}=\{c\}} \\
+\{a,c,d\} \cup \{a,b,c,d,e\}=\{a,b,c,d,e\} &        &          &\{a,c,e\} \cap \{b,c,d\}=\{c\} \\
+\{a,b,c,d,e\} \cup \{a,b,c,d,e,f\}= X      &        &          &\{b,c,d\} \cap \{a,b,c,d,e,f\}=\{b,c,d\} 
+\end{align*}
+
+Como \(\{c,d\} \cap \{a,c,e\}=\{c\} \notin \tau_2\). Por lo tanto
+\(\tau_{2}\) no es una topología sobre \(X\)
+
+\textcolor{blue}{c) $\tau_{3} =\{ \varnothing,X,\{a\},\{f\},\{a,f\},\{a,c,f\},\{b,c,d,e,f\}\}$}
+
+\textbf{Demostración:}
+
+Claramente el vacio \(\varnothing\) y el \(X\) estan en la topología
+\(\tau_3\).
+
+Por otro lado, las uniones e interseciones:
+
+\begin{align*}
+\mbox{Unión}                               &        &          &\mbox{Intersección} \\
+\{a\} \cup \varnothing =\{a\}              &        &          &\{a\} \cap \{f\}=\varnothing \\
+\{a\} \cup \{f\}=\{a,f\}                   &        &          &\{a\} \cap \{a,f\}=\{a\} \\
+\{a\} \cup \{a,c,f\}=\{a,c,f\}             &        &          &\{a\} \cap \{b,c,d,e,f\}=\varnothing \\
+\{a\} \cup \{b,c,d,e,f\}= X                &        &          &\{f\} \cap \{a,f\}=\{f\} \\
+\{a,f\} \cup \{a,c,f\}=\{a,c,f\}           &        &          &\{a,f\} \cap \{a,c,f\}=\{a,f\} \\
+\{a,c,f\} \cup \{b,c,d,e,f\}= X            &        &          &\textcolor{blue}{\{a,c,f\} \cap \{b,c,d,e,f\}=\{c,f\}}
+\end{align*}
+
+Como \(\{a,c,f\} \cap \{b,c,d,e,f\}=\{c,f\} \notin \tau_3\). Por lo
+tanto \(\tau_{3}\) no es una topología sobre \(X\)
+
+\textcolor{blue}{d) $\tau_{4} =\{ \varnothing,X,\{b\},\{d\},\{a,d\},\{a,b,d\},\{a,b,c,d,e\}\}$}
+
+\textbf{Demostración:}
+
+Claramente el vacio \(\varnothing\) y el \(X\) estan en la topología
+\(\tau_4\).
+
+Por otro lado, las uniones e interseciones:
+
+\begin{align*}
+\mbox{Unión}                                  &        &          &\mbox{Intersección} \\
+\{b\} \cup \varnothing =\{b\}                 &        &          &\{b\} \cap \{d\}=\varnothing \\
+\{b\} \cup \{a,d\}=\{a,b,d\}                  &        &          &\{d\} \cap \{a,d\}=\{d\} \\
+\textcolor{blue}{\{b\} \cup \{d\}=\{b,d\}}                      &        &          &\{a,d\} \cap \{a,b,d\}=\{a,d\} \\
+\{a,d\} \cup \{a,b,d\}= \{a,b,d\}             &        &          &\{a,d\} \cap \{d\}=\{d\} \\
+\{a,b,d\} \cup \{a,b,c,d,e\}=\{a,b,c,d,e\}    &        &          &\{a,f\} \cap \{a,c,f\}=\{a,f\} \\
+\{a,d\} \cup X = X                            &        &          &\{a,b,d\} \cap \{a,b,c,d,e\}=\{a,b,d\} 
+\end{align*}
+
+Como \(\{b\} \cup \{d\}=\{b,d\} \notin \tau_4\). Por lo tanto
+\(\tau_{4}\) no es una topología sobre \(X\). \#\# Ejercico 5 (1.5 pts)
+
+\textcolor{red}{Probar que el conjunto $\mathcal{B}=\{(a,\infty), a \in \mathbb{R}\}$ es una base de topología en $\mathbb{R}$. La topología generada por cada base se llama topología de Kolmogorov.}
+
+Sea \(x \in \mathbb{R}\),entonces existe \(x \in B_o=(a, \infty)\), con
+\(B_o=\{ y \in \mathbb{R} \mid y > a\}\), tal que
+\(B_o \in \mathcal{B}\), cumpliendo así, la primera condición.
+
+Sean \(B_1,B_2 \in \mathcal{B}\), entonces \(B_1=(a_1, \infty)\) y
+\(B_2=(a_2, \infty)\), con \(a,b \in \mathbb{R}\), si tomamos
+\(a=max(a_1,a_2)\), tal que se cumple \(B_1 \cap B_2=(a, \infty)\),
+entonces existe \(B_3=(a,\infty) \in \mathcal{B}\), en consecuencia
+\(x\in B_3 \subset B_1 \cap B2\). Por lo tanto, se ha comprobado la
+segunda condición.
+
+\hypertarget{ejercicio-6-2pts}{%
+\subsection{Ejercicio 6 (2pts)}\label{ejercicio-6-2pts}}
+
+Considera \(X=\mathbb{R}\). Indicar si los siguientes conjuntos son
+abiertos y/o cerrados considerando la topología usual \(\tau_u\) y la
+topología de Kolmogorov \(\tau_K\) descrita en el ejemplo anterior.
+
+\begin{itemize}
+\item[a)] $(0,1)$
+\item[b)] $(0,1]$
+\item[c)] $[0,1]$
+\item[d)] $[1, \infty)$
+\item[e)] $(- \infty,0]$
+\end{itemize}
+
+\textcolor{blue}{a) $(0,1)$}
+
+\textbf{Demostración:} Según la topología usual:
+
+Supongamos que \([0,1]\) es cerrado, entonces su
+\(\mathbb{R} \setminus [0,1]\) es abierto, \((-\infty,0)U(1,\infty)\),
+
+\hypertarget{ejemplo-de-metricas}{%
+\subsection{Ejemplo de metricas}\label{ejemplo-de-metricas}}
+
+Sea \(X\) un conjunto no vacio y
+\(d: X \times X \longrightarrow \mathbb{R}\) una función que satisface
+lo siguiente:
+
+\begin{itemize}
+\item [a)] $d(x,y)=0$, si y solo si $x=y$
+\item [b)] $d(x,y)= d(x,z)+d(y,z)$
+\end{itemize}
+
+Probar que es métrica
+
+\textbf{Demostración:}
+
+Sabemos de la primera condición, \(d(x,y)=0\), si y solo si \(x=y\).
+
+Por otro lado, comprobaremos la segunda condición de simetría, para ello
+tenemos:
+
+Sea \(z=x \in X\), entonces: \begin{eqnarray*}
+d(x,y) \leq  d(x,z) + d(y,z)\\
+d(x,y) \leq  d(x,x) + d(y,x)\\
+d(x,y) \leq  d(y,x)
+\end{eqnarray*} Ahora si \(y=z\) \begin{eqnarray*}
+d(y,x) \leq  d(y,z) + d(x,z)\\
+d(y,x) \leq  d(y,y) + d(x,y)\\
+d(y,x) \leq  d(x,y)
+\end{eqnarray*} Por lo tanto, \(d(x,y) \leq d(y,x) \leq d(x,y)\),
+entonces \(d(x,y)= d(y,x)\).
+
+Finalmente, la propiedad de la desigualdad del triángulo, se cumple por
+la condición de simetría de la prueba anterior \begin{eqnarray*}
+d(x,y) \leq  d(x,z) + d(y,z)=d(z,y)\\
+d(x,y) \leq  d(x,z) + d(z,y)
+\end{eqnarray*} Por lo tanto, se cumple la desigualdad del triángulo
+pedida.
+
+\hypertarget{sea-xd-un-espacio-muxe9trico.-probar-que}{%
+\subsection{\texorpdfstring{Sea \((X,d)\) un espacio métrico. Probar
+que}{Sea (X,d) un espacio métrico. Probar que}}\label{sea-xd-un-espacio-muxe9trico.-probar-que}}
+
+\(\alpha (x,y)=min \{1,d(x,y)\}\);
+\(\beta (x,y)= \frac{d(x,y)}{1+d(x,y)}\) son métricas en X.
+
+\textbf{Demostración:}
+
+Como sabemos el menor valor de distancia que la métrica \(d(x,y)\) puede
+tomar es cero, si y solo \(x=y\). Claramente \(\alpha (x,y)=d(x,y)\),
+cumpliendose así todas las condiciones de métrica. Por lo tanto
+\(\alpha (x,y)\) es una métrica sobre X.
+
+En el caso de \(\beta (x,y)= \frac{d(x,y)}{1+d(x,y)}\), es una métrica
+
+\textbf{Demostración:}
+
+Notemos si \(\beta (x,y)=0\), tenemos \begin{eqnarray*}
+0 & = & \frac{d(x,y)}{1+d(x,y)}\\
+0 & = & d(x,y)\\
+\end{eqnarray*} como \(d(x,y)=0\) y es métrica, entonces
+\(\beta (x,y)=0\), la primera condición se cumple.
+
+Notemos que si \(d(x,y)=d(y,x)\), entonces \begin{eqnarray*}
+\frac{d(x,y)}{1+d(x,y)} & = & \frac{d(y,x)}{1+d(y,x)}\\
+\end{eqnarray*}
+
+¡Hasta aqui me quede!
+
+\end{document}
