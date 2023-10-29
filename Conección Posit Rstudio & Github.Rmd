@@ -11,7 +11,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## 1) Obtener cuenta github
 
-Regístrese en GitHub:: Puede registrarse para obtener una cuenta gratuita en GitHub. Esta será su plataforma para colaborar en código utilizando Git.
+Regístrese en GitHub:: Puede registrarse para obtener una cuenta gratuita en GitHub. Esta será su plataforma para colaborar en código utilizando Git..
 
 ## 2) Si deseo conocer name y correo en mi git:
 
