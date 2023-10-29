@@ -84,7 +84,7 @@ Se realizará un proceso que activará la página web de Github con el repositor
 
 ### 5.2 GitHub primero
 
-La forma más sencilla de usar RStudio y GitHub juntos es crear un repositorio en GitHub primero. Cree el repositorio y, a continuación, cuando inicie un nuevo proyecto en RStudio, utilice la opción de control de versiones, introduzca la URL de su repositorio y listo. 
+La forma más sencilla de usar RStudio y GitHub juntos es crear un repositorio en GitHub primero. Cree el repositorio y, a continuación, cuando inicie un nuevo proyecto en RStudio, utilice la opción de control de versiones, introduzca la URL de su repositorio y listo... 
 
 Para bajar un repositorio creado en Github a un proyecto local en RStudio, se tienen que realizar los siguientes pasos:
 
