@@ -22,6 +22,7 @@ library(usethis)
 usethis::edit_git_config()
 # Modificar en el fichero ".gitconfig" los apartados: "name" y "email" 
 # y guardar el fichero
+# usethis::use_git_config(user.name="Elvis102",user.email="elvissanchez102@gmail.com")
 ```
 
 ## 3) Crear un token de acceso personal (PAT) en GitHub
@@ -48,6 +49,8 @@ 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
 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
 
 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
+
+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
 
 ## 4) Almacenar token de acceso personal para conectar RStudio y GitHub
 
@@ -103,7 +106,23 @@ Para bajar un repositorio creado en Github a un proyecto local en RStudio, se ti
 - Después de hacer el commit, pulsamos sobre el botón “Push” para subir los cambios a Github.
 nota a veces hay que actulizar la ventana de posit rstudio o reiniciar R para hacer el commit.
 
+# En caso de perder conección entre rstudio cloud y github, por algún error involuntario
 
+Lo rápido es borrar el repositorio de github:
+
+- En GitHub, navega hasta la página principal del repositorio que deseas eliminar.
+- Haz clic en "Settings" en la barra de navegación superior del repositorio.
+- Desplázate hacia abajo hasta la sección "Danger Zone".
+- Haz clic en "Delete this repository".
+- Escribe el nombre del repositorio en el campo proporcionado.
+- Haz clic en "I understand the consequences, delete this repository".
+- Confirma la eliminación.
+
+luego de generar el token y todos esso pasos
+deberar
+colocar la siguiente instruccion:
+para crear nuevamente el repositorio:
+usethis::use_github()
 
 
 
