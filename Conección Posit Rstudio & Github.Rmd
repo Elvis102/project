@@ -15,7 +15,7 @@ Regístrese en GitHub:: Puede registrarse para obtener una cuenta gratuita en Gi
 
 ## 2) Si deseo conocer name y correo en mi git:
 
-En la consola de RStudio: 
+En la consola de RStudio:: 
 
 ```{r eval=FALSE}
 library(usethis)
