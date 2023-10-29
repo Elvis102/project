@@ -1,0 +1,72 @@
+---
+title: "Manual de conección entre Posit Rstudio y Github"
+author: "Elvis Sanchez"
+date: "2023-10-27"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Obtener cuenta github
+
+Regístrese en GitHub: Puede registrarse para obtener una cuenta gratuita en GitHub. Esta será su plataforma para colaborar en código utilizando Git.
+
+## Configuración de token
+
+Configure un token de acceso personal en GitHub: Este token será su credencial para la autenticación en GitHub cuando use la API de GitHub o la línea de comandos. Puede ir directamente a la página de GitHub para generar su token de acceso personal utilizando la función 
+
+```{r confg}
+library(usethis)
+usethis::create_github_token()
+```
+
+## Amacenar el token
+
+Almacene el token de acceso personal para conectar RStudio y GitHub: Ahora que ha creado un token de acceso personal, debemos almacenarlo para que RStudio pueda acceder a él y sepa cómo conectarse a su cuenta de GitHub. La función gitcreds_set() del paquete gitcreds le ayudará aquí.
+
+usethis::create_github_token()
+una vez hecho el enter, esto no lleva **new personal access** de github, donde aparecerá una **nota** dónde debemos colocar un nombre descriptivo  a nuestro token, y la **expirate** de caducidad(90 días vale mi toque signifca que luego de ello dejará de funcionar) y generar token.Cuando generemos el token hay que copiarlo, lo que me salió es el siguiente:
+
+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
+
+## En Rstudio 
+gitcreds::gitcreds_set()
+
+enter password token? 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
+listo ya esta generado el token
+
+## Reinicicamos rstudio- Restar R
+
+library(gitcreds)
+gitcreds::gitcreds_set()
+
+## Rstudio & github
+Conecte proyectos de RStudio con repositorios de GitHub: Una vez que hemos conectado RStudio y GitHub, podemos discutir cómo hacer que los dos trabajen juntos. La idea básica es que configure los proyectos que cree en RStudio con repositorios GitHub asociados. Cada proyecto de RStudio vive en un solo repositorio de GitHub.
+
+* **RStudio primero**: Si ya tiene un proyecto local y desea obtenerlo en GitHub, primero deberá usar la función `use_git()` de usethis. Luego, puede usar la función `use_github()`, que creará un repositorio de GitHub y lo conectará a su proyecto RStudio actual, así:
+
+library(usethis)
+usethis::use_git()
+usethis::use_github()
+
+
+* **GitHub primero**: La forma más sencilla de usar RStudio y GitHub juntos es crear un repositorio en GitHub primero. Cree el repositorio y luego, cuando inicie un nuevo proyecto en RStudio, utilice la opción de control de versiones, introduzca la URL de su repositorio y listo.
+
+En RStudio seleccionamos crear “New project”, elegimos “Version Control” y luego seleccionamos “Git”.Introducimos en el primer cuadro de texto la url copiada anteriormente.
+
+# Push
+
+* **Push (Subir a Github)**: Empujar significa enviar cualquier cambio en su código de RStudio a GitHub. Para hacer esto, primero tenemos que comprometernos.
+        # Creamos un nuevo fichero de script R o un fichero Rmd y lo grabamos.
+- Marcamos todos los ficheros sobre los checks de “Staged”, rellenamos la descripción del commit y pulsamos sobre el botón de “commit”.
+- Después de hacer el commit, pulsamos sobre el botón “Push” para subir los cambios a Github.
+nota a veces hay que actulizar la ventana de posit rstudio o reiniciar R para hacer el commit.
+
+
+
+
+
+
+
