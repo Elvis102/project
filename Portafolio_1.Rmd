@@ -1,7 +1,7 @@
 ---
 title: "Portafolio 1_Topología"
 author: "Elvis Mauricio Sánchez Rogel"
-date: "Curso de Topología"
+date: "Curso de Topología_primer año"
 output: 
   pdf_document: 
     keep_tex: yes
