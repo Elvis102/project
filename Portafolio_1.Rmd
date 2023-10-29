@@ -35,7 +35,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 \textbf{Demostración:}
 
-Claramente hay que comprobar que se cumpla la primera condición de métrica. Para que $d'(x,x)=d(x,x)+k$ sea métrica debe de cumplirse que la distancia $d(x,x)=0$ para todo $x \in X$, Es decir:
+Claramente hay que comprobar que se cumpla la primera condición de métrica. Para que $d'(x,x)=d(x,x)+k$ sea métrica debe de cumplirse que la distancia $d(x,x)=0$ para todo $x \in X$, Es decir::
 \begin{eqnarray*}
   0 & = & d'(x,x) \\
   0 & = & d(x,x)+k  \\
