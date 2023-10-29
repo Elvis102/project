@@ -43,6 +43,8 @@ usethis::create_github_token()
 
 Nota: una vez hecho el enter, esto no lleva **new personal access** de github, donde aparecerá un nombre descriptivo  a nuestro token, y la **expirate** de caducidad(90 días vale mi toque signifca que luego de ello dejará de funcionar) y generar token.Cuando generemos el token hay que copiarlo, lo que me salió es el siguiente:
 
+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
+
 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
 
 ## 4) Almacenar token de acceso personal para conectar RStudio y GitHub
@@ -75,7 +77,7 @@ library(usethis)
 usethis::use_github()
 ```
 
-Se realizará un proceso que activará la página web de Github con el repositorio asociado al proyecto que se acaba de crear en RStudio.
+Se realizará un proceso que activará la página web de Github con el repositorio asociado al proyecto que se acaba de crear en RStudio..
 
 ### 5.2 GitHub primero
 
