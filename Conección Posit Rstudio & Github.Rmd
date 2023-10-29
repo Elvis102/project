@@ -47,6 +47,8 @@ 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
 
 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
 
+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
+
 ## 4) Almacenar token de acceso personal para conectar RStudio y GitHub
 
 Ahora que ha creado un token de acceso personal, debemos almacenarlo para que RStudio pueda acceder a él y sepa conectarse a su cuenta de GitHub. La función gitcreds_set() del paquete gitcreds te ayudará aquí. Ingresará su nombre de usuario de GitHub y el token de acceso personal como contraseña (NO su contraseña de GitHub, como pensé inicialmente). Una vez que haya hecho todo esto, ¡habrá conectado RStudio a GitHub!.
