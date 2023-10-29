@@ -80,7 +80,7 @@ usethis::use_git()
 usethis::use_github()
 ```
 
-Se realizará un proceso que activará la página web de Github con el repositorio asociado al proyecto que se acaba de crear en RStudio..
+Se realizará un proceso que activará la página web de Github con el repositorio asociado al proyecto que se acaba de crear en RStudio.....
 
 ### 5.2 GitHub primero
 
