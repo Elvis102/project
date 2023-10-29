@@ -68,7 +68,7 @@ Ahora que hemos conectado RStudio y GitHub, discutamos cómo hacer que los dos f
 
 A veces, ya tiene un proyecto localmente y desea obtenerlo en GitHub. Para hacer esto, primero deberá usar la función use_git() de usethis , como hicimos anteriormente. Luego, puede usar la función use_github() , que creará un repositorio de GitHub y lo conectará a su proyecto RStudio actual. 
 
-Para subir un proyecto RStudio en el que se ha configurado las opciones con Git a Github, se tienen que realizar los siguientes pasos en la consola de RStudio:
+Para subir un proyecto RStudio en el que se ha configurado las opciones con Git a Github, se tienen que realizar los siguientes pasos en la consola de RStudio::
 
 ```{r eval=FALSE}
 library(usethis)
