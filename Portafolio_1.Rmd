@@ -163,6 +163,7 @@ Por otro lado, las uniones e interseciones:
 \end{align*}
 
 Como  $\{b\} \cup \{d\}=\{b,d\} \notin \tau_4$. Por lo tanto $\tau_{4}$ no es una topología sobre $X$.
+
 ## Ejercico 5 (1.5 pts)
 
 \textcolor{red}{Probar que el conjunto $\mathcal{B}=\{(a,\infty), a \in \mathbb{R}\}$ es una base de topología en $\mathbb{R}$. La topología generada por cada base se llama topología de Kolmogorov.}
@@ -172,23 +173,33 @@ Sea $x \in \mathbb{R}$,entonces existe $x \in B_o=(a, \infty)$, con $B_o=\{ y \i
 Sean $B_1,B_2 \in \mathcal{B}$, entonces $B_1=(a_1, \infty)$ y $B_2=(a_2, \infty)$, con $a,b \in \mathbb{R}$, si tomamos $a=max(a_1,a_2)$, tal que se cumple $B_1 \cap B_2=(a, \infty)$, entonces existe $B_3=(a,\infty) \in \mathcal{B}$, en consecuencia $x\in B_3 \subset B_1 \cap B2$. Por lo tanto, se ha comprobado la segunda condición.
 
 ## Ejercicio 6 (2pts)
-Considera $X=\mathbb{R}$. Indicar si los siguientes conjuntos son abiertos y/o cerrados considerando la topología usual $\tau_u$ y la topología de Kolmogorov $\tau_K$ descrita en el ejemplo anterior.
+
+\textcolor{red}{Considera $X=\mathbb{R}$. Indicar si los siguientes conjuntos son abiertos y/o cerrados considerando la topología usual $\tau_u$ y la topología de Kolmogorov $\tau_K$ descrita en el ejemplo anterior.}
 \begin{itemize}
 \item[a)] $(0,1)$
+El intervalo $(0,1)$ es abierto en la $\tau_u$, debido a que su complemeto es cerrado es decir, $(-\infty,0]U[1,\infty)$.
+
+Por otro lado, no es abierto, ni cerrado en la topología de Kolmogorov, debido a que falla en el $1$ por la definición de baseen $\tau_k$, y no es cerrado ya su complemento sería $(-\infty,0]U[1,\infty)$, ninguno se ajusta a los básicos de la forma $(a,\infty)$.
+
 \item[b)] $(0,1]$
+El intervalo $(0,1]$ es cerrado en la $\tau_u$, debido a que su complemento es abierto $(1,\infty)$.
+No es abierto, ni cerrado en $\tau_k$, porque no hay básico en su complemento de la forma $(a, \infty)$.
 \item[c)] $[0,1]$
+El intervalo $[0,1]$ es cerrado en la $\tau_u$, debido a que su complemento es abierto $(-\infty, 0) \cup (1,\infty)$
+
+Por otro lado, no es abierto ni cerrado en la topología de Kolmogorov, devido a que falla en el $0$ y $1$ por la definición de base  en $\tau_k$.porque no hay básico en su complemento de la forma $(a, \infty)$.
+
 \item[d)] $[1, \infty)$
+El intervalo $[1, \infty)$ no es abierto en la $\tau_u$, pero si cerrado $\tau_u$, debido a que su complemento es abierto $(-\infty,1)$.
+
+Por otro lado, no es abierto en la topología de Kolmogorov, devido a que falla en el $1$ por la definición de base  en $\tau_k$.
+No es cerrado en $\tau_k$, porque no hay basico en su complemento de la forma $(a, \infty)$.
+
 \item[e)] $(- \infty,0]$
+El intervalo $(- \infty,0]$ no es abierto en la $\tau_u$, pero si cerrado $\tau_u$, debido a que su complemento es abierto $(0,\infty)$.
+Mientras que no es abierto en la topología de Kolmogorov, devido a que falla en el $0$ por la definición de base  en $\tau_k$.
+Por otro lado, si es cerrado en $\tau_k$, ya que su complemento es abierto, es decir, $(0,\infty)$ es abierto.
 \end{itemize}
-
-\textcolor{blue}{a) $(0,1)$}
-
-\textbf{Demostración:}
-Según la topología usual:
-
-Supongamos que $[0,1]$ es cerrado, entonces su $\mathbb{R} \setminus [0,1]$ es abierto,
-$(-\infty,0)U(1,\infty)$,
-
 
 ## Ejemplo de metricas
 
@@ -260,4 +271,4 @@ Elvis Sanchez Rogel
 $\alpha$
  Así tenemos que la tutoría significa grandes avances en la matemática
 
-
+https://math.stackexchange.com/questions/3847448/proof-that-the-kolmogorov-topology-is-indeed-a-topology-over-mathbbr
